@@ -1,4 +1,4 @@
-# My First PyGame, Isaiah Reyes, 11/29/21  2:51pm, v0.4
+# My First PyGame, Isaiah Reyes, 12/1/21  1:40pm, v0.5
 
 import pygame, sys
 from pygame.locals import *
@@ -16,6 +16,7 @@ WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
+CRIMSON = (144, 0, 37)
 
 #Setup Font
 basicFont = pygame.font.SysFont(None, 48)
@@ -27,7 +28,8 @@ textRect.cenerx = windowsSurface.get_rect().centerx
 textRect.cenerx = windowsSurface.get_rect().centery
 
 # Fill backround color
-windowSurface.fill(WHITE)
+windowSurface.fill(CRIMSON) 
 
 # Draw a polygon onto the screen
 pygame.draw.polygon(windowSurface, GREEN, ((146, 0), (291, 106), (236, 277), (56,277), (0, 106))
+
