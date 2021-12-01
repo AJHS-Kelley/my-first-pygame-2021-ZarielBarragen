@@ -1,4 +1,4 @@
-# My First PyGame, Isaiah Reyes, 12/1/21  2:07pm, v0.9
+# My First PyGame, Isaiah Reyes, 12/1/21  2:10pm, v1.0
 
 import pygame, sys
 from pygame.locals import *
@@ -47,3 +47,7 @@ pygame.draw.ellipse(windowSurface, DARKARTS, (300, 250, 40, 80), 1)
 
 # Draw the text triangle
 pygame.draw.rect(windowsSurface, RED, (textRect.left - 20, textRect.top - 20, textRect.width - 40, textRect.height - 40))
+
+# Create Pixel Array
+pixArray = pygame.PixelArray(windowSurfaced)
+pixArray[480][380] = BLUE 
