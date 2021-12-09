@@ -1,4 +1,4 @@
-# My First PyGame, Isaiah Reyes, 12/1/21  2:10pm, v1.0
+# My First PyGame, Isaiah Reyes, 12/1/21  2:20pm, v1.1
 
 import pygame, sys
 from pygame.locals import *
@@ -8,7 +8,7 @@ pygame.init()
 
 # Setup our window 
 windowSurface = pygame.display.set_mode((500, 400), 0, 32)
-pygame.display.set_caption('Hello World!')
+pygame.display.set_caption('Yeet Yeet SKRRT')
 
 # Setup Colors
 BLACK = (0, 0, 0,)
@@ -23,16 +23,16 @@ DARKARTS = (49, 0, 92)
 basicFont = pygame.font.SysFont(None, 48)
 
 # Setup Text
-text = basicFont.render('Hello World!', True, WHITE, BLUE)
+text = basicFont.render('Yeet Yeet SKRRT', True, WHITE, BLUE)
 textRect = text.get_rect()
-textRect.cenerx = windowsSurface.get_rect().centerx
-textRect.cenerx = windowsSurface.get_rect().centery
+textRect.centerx = windowSurface.get_rect().centerx
+textRect.centerx = windowSurface.get_rect().centery
 
 # Fill backround color
 windowSurface.fill(CRIMSON) 
 
 # Draw a polygon onto the screen
-pygame.draw.polygon(windowSurface, GREEN, ((146, 0), (291, 106), (236, 277), (56,277), (0, 106)))
+pygame.draw.polygon(windowSurface, DARKARTS, ((146, 0), (291, 106), (236, 277), (56,277), (0, 106)))
 
 # Draw lines on the screen
 pygame.draw.line(windowSurface, BLUE, (60, 60), (120, 60), 4)
@@ -46,8 +46,22 @@ pygame.draw.circle(windowSurface, BLACK, (300, 50), 20, 0)
 pygame.draw.ellipse(windowSurface, DARKARTS, (300, 250, 40, 80), 1)
 
 # Draw the text triangle
-pygame.draw.rect(windowsSurface, RED, (textRect.left - 20, textRect.top - 20, textRect.width - 40, textRect.height - 40))
+pygame.draw.rect(windowSurface, RED, (textRect.left - 20, textRect.top - 20, textRect.width - 40, textRect.height - 40))
 
 # Create Pixel Array
-pixArray = pygame.PixelArray(windowSurfaced)
-pixArray[480][380] = BLUE 
+pixArray = pygame.PixelArray(windowSurface)
+pixArray[480][380] = CRIMSON 
+del pixArray
+
+# Draw the text onto the surface
+windowSurface.blit(text, textRect)
+
+# Update Pygame Display
+pygame.display.update()
+
+# Run game loop
+while True:
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
