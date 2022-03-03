@@ -4,7 +4,7 @@ import pygame, sys, time
 from pygame.locals import *
 
 # Setup pygame
-pyagame.init()
+pyagame.init() # pygame.init() s
 
 #Setup the window 
 WINDOWWIDTH = 400
@@ -39,7 +39,7 @@ boxes = [b1, b2, b3]
 while True:
     # Check for QUIT event.
     for event in pygame.event.get():
-        if event.typ == QUIT
+        if event.typ == QUIT # event.type and QUIT: should be updated.  
             pygame.quit()
             sys.exit()
 
@@ -78,7 +78,7 @@ while True:
                     b['dir'] = UPLEFT
                 if b['dir'] == DOWNRIGHT:
                     b['dir'] = UPRIGHT
-            if b['rect'].right > WINDOWIDTH:
+            if b['rect'].right > WINDOWIDTH: #WINDOWWIDTH  There are two W's in the middle.  
                 # The box has moved past the right
                 if b['dir'] == DOWNRIGHT:
                     b['dir'] = DOWNLEFT
